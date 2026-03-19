@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
@@ -20,6 +20,23 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.visible)
+        }
+      })
+    }, { threshold: 0.1 })
+
+    const elements = document.querySelectorAll(`.${styles.fadeInOnScroll}`)
+    elements.forEach((el) => observer.observe(el))
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
 
   const handleWaitlist = async (e) => {
     e.preventDefault()
@@ -98,7 +115,7 @@ export default function Home() {
         </section>
 
         {/* Problem Section */}
-        <section className={styles.problem}>
+        <section className={`${styles.problem} ${styles.fadeInOnScroll}`}>
           <div className={styles.problemContent}>
             <h2 className={styles.problemHeading}>You already know what to do.</h2>
             <div className={styles.problemText}>
@@ -110,7 +127,7 @@ export default function Home() {
         </section>
 
         {/* How It Works */}
-        <section className={styles.howWorks}>
+        <section className={`${styles.howWorks} ${styles.fadeInOnScroll}`}>
           <h2 className={styles.sectionHeading}>Three things that change everything</h2>
           <div className={styles.featureGrid}>
             <div className={styles.feature}>
@@ -129,7 +146,7 @@ export default function Home() {
         </section>
 
         {/* Waitlist CTA */}
-        <section className={styles.waitlistSection} id="waitlist">
+        <section className={`${styles.waitlistSection} ${styles.fadeInOnScroll}`} id="waitlist">
           <div className={styles.waitlistContent}>
             <h2 className={styles.waitlistHeading}>Ready for a partner that actually shows up?</h2>
             <p className={styles.waitlistSubhead}>Join the early access list. Free. No credit card required.</p>
