@@ -69,7 +69,7 @@ export default function Home() {
       <Head>
         <title>Cinis — AI that remembers you</title>
         <meta name="description" content="An AI coaching partner that learns your patterns, knows your pace, and reaches out before you fall behind." />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Figtree:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
 
       <div className={styles.page}>
