@@ -117,11 +117,11 @@ export default function Home() {
         {/* Problem Section */}
         <section className={`${styles.problem} ${styles.fadeInOnScroll}`}>
           <div className={styles.problemContent}>
-            <h2 className={styles.problemHeading}>You already know what to do.</h2>
+            <h2 className={styles.problemHeading}>You already know what you need to do.</h2>
             <div className={styles.problemText}>
-              <p>You've tried the apps. Set up the systems. Bought the planners. Each one started with genuine hope. Each one sits unopened now — not because you failed, but because they assumed the wrong problem.</p>
-              <p>The gap between knowing what to do and actually doing it isn't organizational. It's neurological. No system fixes that. But the right relationship can.</p>
-              <p>Cinis is built on one idea: a partner that knows you changes everything. It watches your patterns, learns your pace, and reaches out with exactly what you need at exactly the right moment. Not another thing to remember. Something that remembers you.</p>
+              <p>The problem isn't knowledge. It's not motivation either. It's the gap between knowing and starting — and it's wider for some brains than others.</p>
+              <p>You've tried the apps. The lists. The systems. They all work until they don't. Because they wait for you to show up. And some days, you can't.</p>
+              <p>Cinis doesn't wait. It reaches out. It remembers what you told it last week. It notices when you've gone quiet. It's not a tool — it's a presence.</p>
             </div>
           </div>
         </section>
@@ -141,6 +141,25 @@ export default function Home() {
             <div className={styles.feature}>
               <h3>It remembers</h3>
               <p>Patterns. Avoidances. Wins. Momentum. The longer you use Cinis, the more intelligent it becomes about what you need. It doesn't start fresh every day. It builds on everything it knows about you.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Proof / Why Cinis */}
+        <section className={`${styles.socialProof} ${styles.fadeInOnScroll}`}>
+          <h2 className={styles.sectionHeading}>Built for the way your brain actually works.</h2>
+          <div className={styles.statGrid}>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>13 questions</div>
+              <div className={styles.statLabel}>Your coach knows you before you send a single message</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>6 coaching voices</div>
+              <div className={styles.statLabel}>Find the tone that actually moves you</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>3-layer memory</div>
+              <div className={styles.statLabel}>Your coach remembers yesterday, last week, and who you are</div>
             </div>
           </div>
         </section>
@@ -171,6 +190,7 @@ export default function Home() {
         {/* Footer */}
         <footer className={styles.footer}>
           <p>Cinis · Early Access 2026</p>
+          <p className={styles.footerMission}>Cinis is built for people with ADHD, executive dysfunction, and anyone who's ever stared at a task and couldn't begin. You're not broken. You just need a different kind of support.</p>
         </footer>
       </div>
     </>

@@ -446,6 +446,54 @@
 }
 
 /* ────────────────────────────────────────────────────────────────
+   SOCIAL PROOF SECTION
+   ──────────────────────────────────────────────────────────────── */
+
+.socialProof {
+  padding: 100px 40px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.statCard {
+  padding: 40px 32px;
+  background: rgba(42, 24, 16, 0.4);
+  border: 1px solid rgba(232, 50, 26, 0.15);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  background: rgba(42, 24, 16, 0.6);
+  border-color: rgba(232, 50, 26, 0.3);
+  transform: translateY(-4px);
+}
+
+.statNumber {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 900;
+  color: #E8321A;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: rgba(240, 234, 214, 0.65);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ────────────────────────────────────────────────────────────────
    FOOTER
    ──────────────────────────────────────────────────────────────── */
 
@@ -459,6 +507,16 @@
   font-size: 0.85rem;
   color: rgba(240, 234, 214, 0.4);
   letter-spacing: 0.05em;
+}
+
+.footerMission {
+  font-size: 13px !important;
+  color: rgba(240, 234, 214, 0.5) !important;
+  margin-top: 24px !important;
+  max-width: 700px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.6;
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -501,6 +559,7 @@
 
   .problem,
   .howWorks,
+  .socialProof,
   .waitlistSection {
     padding: 60px 24px;
   }
@@ -509,6 +568,10 @@
   .sectionHeading,
   .waitlistHeading {
     font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .statGrid {
+    gap: 24px;
   }
 }
 
@@ -545,11 +608,13 @@
 
   .problem,
   .howWorks,
+  .socialProof,
   .waitlistSection {
     padding: 40px 16px;
   }
 
-  .featureGrid {
+  .featureGrid,
+  .statGrid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
