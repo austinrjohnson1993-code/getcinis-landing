@@ -1,6 +1,6 @@
 .page {
   min-height: 100vh;
-  background: #0F0906;
+  background: radial-gradient(ellipse at 50% 30%, #1A0A06 0%, #0C0705 60%, #080503 100%);
 }
 
 /* ────────────────────────────────────────────────────────────────
