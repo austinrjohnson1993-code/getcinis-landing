@@ -67,7 +67,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Cinis — AI that remembers you</title>
+        <title>Cinis — Where start meets finished.</title>
+        <meta property="og:title" content="Cinis — Where start meets finished." />
         <meta name="description" content="An AI coaching partner that learns your patterns, knows your pace, and reaches out before you fall behind." />
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
@@ -90,12 +91,12 @@ export default function Home() {
           <div className={styles.heroContent}>
             <div className={styles.label}>NOW IN EARLY ACCESS</div>
             <h1 className={styles.headline}>
-              Most productivity apps wait for you<br />to remember them.
+              Most apps wait for you<br />to remember them.
               <br />
               <span className={styles.accentText}>Cinis remembers you.</span>
             </h1>
             <p className={styles.subhead}>
-              An AI coaching partner that learns your patterns, knows your pace, and reaches out before you fall behind. Built for ADHD brains. Works for everyone.
+              An external executive function that learns your patterns, knows your pace, and reaches out before you fall behind. Built for brains with an execution gap. Works for everyone.
             </p>
             <form onSubmit={handleWaitlist} className={styles.heroForm}>
               <input
@@ -190,7 +191,8 @@ export default function Home() {
         {/* Footer */}
         <footer className={styles.footer}>
           <p>Cinis · Early Access 2026</p>
-          <p className={styles.footerMission}>Cinis is built for people with ADHD, executive dysfunction, and anyone who's ever stared at a task and couldn't begin. You're not broken. You just need a different kind of support.</p>
+          <p className={styles.footerMission}>Cinis is built for people with execution gaps — anyone who's ever stared at a task and couldn't begin. You're not broken. You just need a different kind of support.</p>
+          <p className={styles.footerMission}>From ashes, momentum.</p>
         </footer>
       </div>
     </>
